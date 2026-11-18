@@ -1,32 +1,21 @@
-# ChatGPT Google Forms MCP - strony informacyjne (projekt)
+# ChatGPT Google Forms MCP — strony informacyjne
 
-**Status: do przeglądu. Nie włączać GitHub Pages przed zatwierdzeniem treści.**
+**Status:** publiczne, statyczne strony informacyjne hostowane w GitHub Pages.
 
-Repozytorium ma zawierać wyłącznie publiczne pliki statyczne: `index.html`, `privacy.html` i `.nojekyll`.
-Nie wolno zamieszczać tu kodu serwera MCP, tokenów OAuth, sekretów, kluczy ani danych formularzy.
+- [Strona główna (PL)](https://wjedrzejewski-tech.github.io/google-forms-mcp-pages/)
+- [Polityka prywatności (PL)](https://wjedrzejewski-tech.github.io/google-forms-mcp-pages/privacy.html)
+- [About the integration (EN)](https://wjedrzejewski-tech.github.io/google-forms-mcp-pages/en/)
+- [Privacy policy (EN)](https://wjedrzejewski-tech.github.io/google-forms-mcp-pages/en/privacy.html)
 
-## Zastosowanie
+Witryna służy wyłącznie informowaniu o integracji konta `rciittzut@gmail.com` używanego na potrzeby RCIiTT ZUT. **Nie jest to oficjalna strona uczelni ani publiczna usługa Google Forms.**
 
-Witryna opisuje integrację Google Forms MCP przeznaczoną do obsługi konta
-`rciittzut@gmail.com` na potrzeby RCIiTT ZUT. Nie należy przedstawiać jej jako prywatnej
-aplikacji osobistej ani oficjalnej witryny uczelni.
+Pliki: `index.html`, `privacy.html`, `en/index.html`, `en/privacy.html`, `assets/logo-google-forms-mcp-512.png`, `assets/logo-google-forms-mcp-120.png`, `.nojekyll`.
 
-## Przed publikacją
+- Logo 512 × 512 jest wyświetlane na stronach; mały wariant 120 × 120 służy jako ikona witryny.
+- Polska strona główna zachowuje znacznik Google Search Console. Właściciel potwierdził weryfikację witryny 18.11.2026 r.
+- Google OAuth nadal wymaga odrębnej ponownej weryfikacji marki. Samo działanie GitHub Pages nie potwierdza statusu `In production`.
+- Repozytorium **nie może** zawierać kodu chronionego Workera, danych formularzy, sekretów ani tokenów.
+- Przetwarzanie rzeczywistych danych respondentów pozostaje poza zakresem obecnego pilotażu do czasu odrębnej oceny i zatwierdzenia.
+- Wdrażanie: GitHub Pages z gałęzi `main`, katalog `/` (root), bez własnych workflow CI.
 
-1. Potwierdzić, kto formalnie odpowiada za integrację, dane i wskazany kontakt; ustalić wymagane uprawnienia organizacyjne.
-2. Zweryfikować opis przechowywania i usuwania danych uwierzytelniających w Cloudflare KV.
-3. Zatwierdzić strony i upewnić się, że nie zawierają informacji poufnych.
-4. Dopiero potem udostępnić repozytorium publicznie i włączyć GitHub Pages z `main` / `(root)`.
-5. Zweryfikować adres strony w Google Search Console (URL-prefix); osobno sprawdzić wymogi OAuth dotyczące domeny strony i callbacku Workera.
-6. Nie przełączać Google OAuth na `In production`, dopóki wymagania Google i kontrola ochrony danych nie zostaną spełnione.
-
-Planowany adres po upublicznieniu repozytorium:
-`https://wjedrzejewski-tech.github.io/google-forms-mcp-pages/`
-
-Google może zażądać weryfikowalnej domeny także dla przekierowania OAuth w Cloudflare Workers.
-Sama witryna na GitHub Pages nie gwarantuje akceptacji domeny.
-
-## Hosting
-
-Docelowo GitHub Pages: `Settings > Pages > Deploy from a branch > main > /(root) > Save`.
-Nie trzeba tworzyć własnego workflow CI do budowania HTML.
+Utrzymanie: zmiany w HTML muszą zachować poprawne linki PL/EN oraz znacznik weryfikacyjny Google na stronie głównej.
