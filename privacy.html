@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Polityka prywatności | ChatGPT Google Forms MCP</title>
+<meta name="description" content="Informacje o dostępie do danych Google Forms, przesyłaniu danych przez MCP i obsłudze autoryzacji OAuth."><style>
+:root{color-scheme:light;--ink:#17253b;--muted:#556579;--accent:#165d73;--line:#dde6ec;--paper:#fff;--wash:#f4f7f9}
+*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent)}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.container{width:min(100% - 36px,860px);margin:auto}header{background:var(--paper);border-bottom:1px solid var(--line)}
+header .container{display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px 0}
+.brand{font-weight:750;letter-spacing:-.02em;color:var(--ink);text-decoration:none}nav{display:flex;gap:1.4rem;flex-wrap:wrap}nav a{text-decoration:none;font-weight:600}
+main{background:var(--paper);margin:35px auto 50px;padding:clamp(26px,5vw,60px);border:1px solid var(--line);border-radius:15px}
+h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;margin:.4em 0 .65em;letter-spacing:-.03em}
+h2{font-size:1.2rem;line-height:1.35;margin:1.9em 0 .55em}h3{font-size:1rem;margin:1.5em 0 .3em}
+p{margin:0 0 1.2em}ul{padding-left:1.3rem}li{margin:.35em 0}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:750;color:var(--accent)}
+.lead{font-size:1.1rem;color:var(--muted)}.notice{padding:15px 18px;background:#eef5f7;border-left:4px solid var(--accent);margin:1.7rem 0}
+small,.muted{color:var(--muted)}footer{margin:0 auto 2rem;text-align:center;color:var(--muted);font-size:.88rem}footer a{color:inherit}
+@media(max-width:480px){header .container{align-items:flex-start;flex-direction:column}main{margin:18px auto 28px}}
+</style></head>
+<body><header><div class="container"><a class="brand" href="./index.html">ChatGPT Google Forms MCP</a>
+<nav aria-label="Nawigacja główna"><a href="./index.html">O aplikacji</a><a href="./privacy.html">Prywatność</a></nav></div></header>
+<main class="container"><p class="eyebrow">Dane i bezpieczeństwo · wersja robocza: 18 listopada 2026 r.</p>
+<h1>Polityka prywatności</h1>
+<p class="lead">Niniejsze informacje dotyczą testowej integracji Google Forms MCP używanej z jednym kontem Google na potrzeby RCIiTT ZUT. Kontakt w sprawie integracji: <a href="mailto:rciittzut@gmail.com">rciittzut@gmail.com</a>.</p>
+<div class="notice"><strong>Status wdrożenia:</strong> dostęp ograniczony do jednego konta i testów z danymi syntetycznymi. Przetwarzanie rzeczywistych danych respondentów nie zostało dopuszczone w tym pilotażu.</div>
+<h2>1. Jakie informacje mogą być dostępne?</h2>
+<ul><li>Dane konta Google potrzebne do identyfikacji i kontroli dostępu, w szczególności adres e-mail i nazwa profilu (zakresy <code>email</code> i <code>profile</code>).</li>
+<li>Treść oraz struktura formularzy Google: tytuły, opisy, pytania, warianty odpowiedzi i identyfikatory formularzy (zakres <code>forms.body</code>).</li>
+<li>Przesłane odpowiedzi na formularze, o ile użytkownik wywoła odpowiednie narzędzie odczytu (zakres <code>forms.responses.readonly</code>). Takie odpowiedzi mogą zawierać dane osobowe.</li></ul>
+<h2>2. W jakim celu używane są dane?</h2>
+<p>Dane są pobierane wyłącznie w celu wykonania operacji zleconych w ramach połączonej integracji: sprawdzania konta, tworzenia nieopublikowanych formularzy, odczytu ich struktury, edytowania dopuszczonych formularzy oraz odczytu wskazanych odpowiedzi. Integracja nie używa danych Google Forms do reklam ani sprzedaży.</p>
+<h2>3. Dokąd trafiają dane i gdzie mogą być przechowywane?</h2>
+<p>Żądanie pochodzi z ChatGPT, przechodzi przez serwer MCP w Cloudflare Workers i jest realizowane za pośrednictwem Google Forms API. Wyniki odczytu, w tym odpowiedzi, mogą zostać przekazane z powrotem do ChatGPT i znaleźć się w treści rozmowy. Zastosowanie mają także zasady przetwarzania i retencji danych po stronie Google, Cloudflare oraz OpenAI, zależnie od wykorzystywanych usług i ustawień konta.</p>
+<p>Warstwa uwierzytelnienia używa Cloudflare KV do przechowywania danych technicznych niezbędnych do obsługi sesji i uprawnień OAuth, w tym tokenów dostępu lub odświeżania. Integracja nie tworzy oddzielnej bazy kopii odpowiedzi na formularze. Okres przechowywania danych uwierzytelnienia oraz procedura ich pełnego usuwania wymagają odrębnej kontroli operatora; nie deklarujemy niezweryfikowanego automatycznego terminu usunięcia.</p>
+<p>Ta publiczna strona informacyjna może być udostępniana za pomocą GitHub Pages. Witryna nie umożliwia logowania do konta Google, nie pobiera formularzy ani odpowiedzi i nie zawiera kodu serwera MCP. GitHub może przetwarzać techniczne dane odwiedzin, w tym adres IP, zgodnie ze swoimi zasadami.</p>
+<h2>4. Kto ma dostęp?</h2>
+<p>Dostęp do narzędzi MCP wymaga autoryzacji i jest ograniczony po stronie serwera do konta <code>rciittzut@gmail.com</code>. Samo wyświetlenie ekranu zgody Google nie oznacza przyznania dostępu do MCP. Dostawcy usług technicznych mogą przetwarzać dane w zakresie niezbędnym do ich świadczenia.</p>
+<h2>5. Jak wycofać dostęp lub zgłosić pytanie?</h2>
+<p>Można odłączyć integrację w ustawieniach ChatGPT oraz cofnąć jej dostęp na <a href="https://myaccount.google.com/connections" rel="noopener noreferrer">koncie Google</a>. Aby zgłosić żądanie dotyczące danych przechowywanych przez operatora integracji lub zapytać o sposób ich usunięcia, napisz na <a href="mailto:rciittzut@gmail.com">rciittzut@gmail.com</a>. Wycofanie autoryzacji nie usuwa automatycznie wcześniejszych wiadomości z ChatGPT ani danych zgromadzonych niezależnie przez inne usługi.</p>
+<h2>6. Aktualizacje informacji</h2>
+<p>Przed rozszerzeniem aplikacji poza pilotaż z ograniczonym dostępem informacje te wymagają przeglądu pod kątem zakresu danych, okresów retencji, tożsamości odpowiedzialnego operatora i właściwych obowiązków ochrony danych. Zmiany będą publikowane pod tym adresem.</p></main>
+<footer class="container">Informacje o integracji technicznej RCIiTT ZUT, nieoficjalna witryna uczelni · <a href="./privacy.html">Polityka prywatności</a> · Kontakt: <a href="mailto:rciittzut@gmail.com">rciittzut@gmail.com</a></footer>
+</body></html>
