@@ -19,3 +19,9 @@ Pliki: `index.html`, `privacy.html`, `en/index.html`, `en/privacy.html`, `assets
 - Wdrażanie: GitHub Pages z gałęzi `main`, katalog `/` (root), bez własnych workflow CI.
 
 Utrzymanie: zmiany w HTML muszą zachować poprawne linki PL/EN oraz znacznik weryfikacyjny Google na stronie głównej.
+
+## Ograniczenie indeksowania
+
+Wszystkie cztery strony HTML (`index.html`, `privacy.html`, `en/index.html`, `en/privacy.html`) zawierają dyrektywę `<meta name="robots" content="noindex, noarchive, nosnippet, noimageindex">`. Ma ona ograniczać obecność stron w wynikach wyszukiwania Google, Bing i innych usług, które przestrzegają tej reguły. Nie stosować `Disallow` w `robots.txt` dla tych stron: wyszukiwarka musi móc odczytać dyrektywę `noindex`.
+
+Witryna i kod strony nadal są publicznie dostępne przez bezpośredni adres, co jest potrzebne do Google OAuth. `noindex` nie jest ochroną dostępu, nie gwarantuje niewidoczności we wszystkich wyszukiwarkach i nie blokuje indeksowania publicznego repozytorium GitHub. Jeśli strony zostały już zindeksowane, usunięcie ich z wyników wymaga ponownego odwiedzenia przez wyszukiwarkę, ewentualnie zgłoszenia usunięcia przez narzędzie operatora wyszukiwarki.
