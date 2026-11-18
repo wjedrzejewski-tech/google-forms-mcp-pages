@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application information | ChatGPT Google Forms MCP</title>
+<meta name="description" content="A restricted Google Forms integration for one RCIiTT ZUT Google account, operated through ChatGPT and a remote MCP server."><link rel="icon" type="image/png" sizes="120x120" href="../assets/logo-google-forms-mcp-120.png"><style>:root{color-scheme:light;--ink:#17253b;--muted:#556579;--accent:#165d73;--line:#dde6ec;--paper:#fff;--wash:#f4f7f9}
+*{box-sizing:border-box}body{margin:0;background:var(--wash);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent)}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.container{width:min(100% - 36px,860px);margin:auto}header{background:var(--paper);border-bottom:1px solid var(--line)}
+header .container{display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:20px 0}
+.brand-wrap{display:flex;align-items:center;gap:14px}.brand-logo{width:52px;height:52px;border-radius:12px;display:block}.brand{font-weight:750;letter-spacing:-.02em;color:var(--ink);text-decoration:none}.brand-sub{font-size:.9rem;color:var(--muted)}
+nav{display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center}nav a{text-decoration:none;font-weight:600}.lang-switch{display:flex;gap:.5rem;align-items:center;padding:.35rem .7rem;background:#eef5f7;border:1px solid var(--line);border-radius:999px;font-size:.92rem}.lang-switch .current{font-weight:750;color:var(--ink)}
+main{background:var(--paper);margin:35px auto 50px;padding:clamp(26px,5vw,60px);border:1px solid var(--line);border-radius:15px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 132px;gap:24px;align-items:start}.hero img{width:132px;height:132px;border-radius:24px;display:block;justify-self:end}
+h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2;margin:.4em 0 .65em;letter-spacing:-.03em}
+h2{font-size:1.2rem;line-height:1.35;margin:1.9em 0 .55em}h3{font-size:1rem;margin:1.5em 0 .3em}
+p{margin:0 0 1.2em}ul{padding-left:1.3rem}li{margin:.35em 0}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:750;color:var(--accent)}
+.lead{font-size:1.1rem;color:var(--muted)}.notice{padding:15px 18px;background:#eef5f7;border-left:4px solid var(--accent);margin:1.7rem 0}
+small,.muted{color:var(--muted)}footer{margin:0 auto 2rem;text-align:center;color:var(--muted);font-size:.88rem}footer a{color:inherit}
+@media(max-width:700px){.hero{grid-template-columns:1fr}.hero img{justify-self:start;width:110px;height:110px}}
+@media(max-width:480px){header .container{align-items:flex-start;flex-direction:column}main{margin:18px auto 28px}}
+</style></head>
+<body><header><div class="container"><div class="brand-wrap"><img class="brand-logo" src="../assets/logo-google-forms-mcp-512.png" alt="ChatGPT Google Forms MCP logo"><div><a class="brand" href="./index.html">ChatGPT Google Forms MCP</a><div class="brand-sub">Private Google Forms integration for the RCIiTT ZUT account</div></div></div>
+<nav aria-label="Main navigation"><a href="./index.html">About</a><a href="./privacy.html">Privacy</a><span class="lang-switch" aria-label="Language switcher"><a href="../index.html" lang="pl">PL</a><span aria-hidden="true">|</span><span class="current">EN</span></span></nav></div></header>
+<main class="container"><section class="hero"><div><p class="eyebrow">Integration information</p>
+<h1>ChatGPT Google Forms MCP</h1>
+<p class="lead">A limited-access test integration designed to operate Google Forms through a single Google account used for RCIiTT ZUT purposes.</p></div><img src="../assets/logo-google-forms-mcp-512.png" alt="ChatGPT Google Forms MCP logo"></section>
+<div class="notice"><strong>Current status:</strong> synthetic-data testing only. The MCP server allows only the <code>rciittzut@gmail.com</code> account. This is not a public service for general Google users.</div>
+<h2>What can this integration do?</h2>
+<ul><li>Create unpublished Google Forms.</li>
+<li>Read form structure and add or edit questions only in unpublished forms that have never received responses.</li>
+<li>Read form responses available to the connected Google account when explicitly requested by the authorized user.</li>
+<li>Check the connection status with Google.</li></ul>
+<h2>How does access work?</h2>
+<p>The user authorizes a Google account through OAuth. The remote MCP server runs on Cloudflare Workers and communicates with the Google Forms API. Access to tools requires authentication in ChatGPT and an allowed Google account. The app does not expose question deletion or form publishing tools.</p>
+<h2>Scope of use</h2>
+<p>This solution is used for the RCIiTT ZUT account, which is not part of Google Workspace. This page exists only to describe the technical integration and is not an official university information service. Processing real respondent data or organizational data requires separate review and authorization.</p>
+<h2>Contact and privacy</h2>
+<p>Contact for this integration: <a href="mailto:rciittzut@gmail.com">rciittzut@gmail.com</a>. Data-handling and access-revocation rules are described in the <a href="./privacy.html">privacy policy</a>.</p></main>
+<footer class="container">Technical integration information for RCIiTT ZUT, unofficial university website · <a href="./privacy.html">Privacy policy</a> · <a href="../index.html" lang="pl">Polska wersja</a> · Contact: <a href="mailto:rciittzut@gmail.com">rciittzut@gmail.com</a></footer>
+</body></html>
